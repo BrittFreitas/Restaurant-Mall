@@ -1,0 +1,21 @@
+@use "variables" as*;
+
+header {
+    background-image: url(../../../assets/home-header.jpg);
+
+}
+nav {
+    ul {
+        display: flex
+        
+    }
+     li {
+        list-style-type: none;
+
+        a{ 
+            color: $white;
+            text-decoration: none;
+        }
+     }
+    
+}

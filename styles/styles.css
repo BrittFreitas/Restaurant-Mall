@@ -236,8 +236,49 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+/* _typography.scss */
+html {
+  font-size: 62.5%;
+}
+html h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 6.9rem;
+  text-transform: uppercase;
+}
+html h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+html nav {
+  font-family: "Josefin Sans", sans-serif;
+}
+html p {
+  font-size: 2rem;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+footer .copyrightStatement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+}
+footer .copyrightStatement p {
+  margin: 0;
+}
+footer .copyrightStatement p {
+  margin: 0;
+}
+
 .wrapper {
-  max-width: 1260px;
+  max-width: 1400px;
   width: 90%;
   margin: 0 auto;
 }
@@ -248,20 +289,119 @@ body {
 }
 
 header {
-  background-image: url(../../../assets/home-header.jpg);
+  background-image: url(../assets/home-header.jpg);
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: 100%;
+  background-size: cover;
 }
-
-nav ul {
+header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header h1 .restaurant {
+  background-color: white;
+  color: #171B0E;
+  display: block;
+  width: 475px;
+}
+header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-nav li {
+header nav li {
   list-style-type: none;
 }
-nav li a {
+header nav li a {
   color: white;
   text-decoration: none;
+  background-color: transparent;
+  margin: 25px 25px;
+  line-height: 29px;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+header nav li a:hover {
+  border-bottom: 2px solid #FFD300;
+}
+header nav li a:focus {
+  border-bottom: 2px solid #FFD300;
+}
+
+.sectionOne {
+  position: relative;
+}
+.sectionOne img {
+  position: absolute;
+  top: 0;
+  right: 100px;
+}
+.sectionOne .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sectionOne .contentContainer .descriptor {
+  width: 50%;
+  padding: 5%;
+}
+.sectionOne .contentContainer .descriptor .titleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sectionOne .contentContainer .descriptor .circleIcon {
+  color: black;
+  background-color: #FFD300;
+  border-radius: 50%;
+  font-size: 3rem;
+  padding-top: 10px;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sectionFour {
+  background-color: #171B0E;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.galleryimg {
+  width: calc(33.3333333333% - 20px);
 }
 
 body {

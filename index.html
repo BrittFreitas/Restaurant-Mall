@@ -14,48 +14,61 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="wrapper">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./index.html">About</a></li>
           <li><a href="./blog.html">Blog</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
-      <h1>the <span>restaurant mall</span></h1>
-      <img
-        src="./assets/home-box-header.png"
-        alt="image of a plated salad with a restaruant in the background."
-      />
+      <h1 class="wrapper">the <span class="restaurant">restaurant</span>mall</h1>
+      
     </header>
     <main>
       <section class="sectionOne">
-        <div class="contentContainer">
-          <div>
+        <!--<img
+        src="./assets/home-box-header.png"
+        alt="image of a plated salad with a restaruant in the background."
+      />-->
+        <div class="contentContainer wrapper">
+          <div class="descriptor">
+            <div class="titleContainer">
+            <i class="fa-sharp fa-solid fa-location-dot circleIcon"></i>
             <h2>location</h2>
+           </div>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
               minima facere repellendus, suscipit dolores accusamus. Alias
               voluptatibus deserunt veniam fuga!
             </p>
           </div>
-          <div>
+          <div class="descriptor">
+            <div class="titleContainer">
+            <i class="fa-solid fa-users circleIcon"></i>
             <h2>community</h2>
+          </div>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
               minima facere repellendus, suscipit dolores accusamus. Alias
               voluptatibus deserunt veniam fuga!
             </p>
           </div>
-          <div>
+          <div class="descriptor">
+            <div class="titleContainer">
+            <i class="fa-sharp fa-solid fa-file circleIcon"></i>
             <h2>blog</h2>
+          </div>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
               minima facere repellendus, suscipit dolores accusamus. Alias
               voluptatibus deserunt veniam fuga!
             </p>
           </div>
-          <div>
+          <div class="descriptor">
+            <div class="titleContainer">
+            <i class="fa-sharp fa-solid fa-phone-flip circleIcon"></i>
             <h2>get in touch</h2>
+          </div>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
               minima facere repellendus, suscipit dolores accusamus. Alias
@@ -128,8 +141,8 @@
       </section>
 
       <section class="sectionFour">
-        <div>
-          <img
+        <div class="gallery wrapper">
+          <img class="img"
             src="./assets/gallery-image-1.jpg"
             alt="image of restaurant space showing edison bulbs and green vines"
           />
@@ -145,7 +158,9 @@
       </section>
     </main>
     <footer>
-      <p>Copyright 2019 Juno College</p>
+      <div class="copyrightStatement"></div>
+      <p>Copyright <i class="copyright fa-regular fa-copyright"></i
+        >2019 Juno College</p>
     </footer>
   </body>
 </html>

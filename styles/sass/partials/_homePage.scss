@@ -1,21 +1,115 @@
 @use "variables" as*;
 
 header {
-    background-image: url(../../../assets/home-header.jpg);
+    background-image: url(../assets/home-header.jpg);
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
 
-}
-nav {
-    ul {
-        display: flex
-        
-    }
-     li {
-        list-style-type: none;
-
-        a{ 
-            color: $white;
-            text-decoration: none;
-        }
-     }
+    h1 {
+        display: flex;
+        flex-direction: column;
     
+        .restaurant {
+            background-color: white;
+            color: $secondaryColor;
+            display: block;
+            width: 475px;
+        }
+    }
+    nav {
+        ul {
+            display: flex
+            
+        }
+         li {
+            list-style-type: none;
+    
+            a{ 
+                color: $white;
+                text-decoration: none;
+                background-color: transparent;
+                margin: 25px 25px;
+                line-height: 29px;
+                letter-spacing: 1px;
+                font-size: 2.0rem;
+                font-weight: bold;
+                &:hover {
+                    border-bottom: 2px solid $tertiaryColor;
+                }
+
+                &:focus {
+                    border-bottom: 2px solid $tertiaryColor;
+
+                }
+            }
+         }
+
+    }
 }
+
+    
+
+
+
+.sectionOne {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 100px;
+    }
+
+    .contentContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .descriptor {
+            width: 50%;
+            padding: 5%;
+            .titleContainer {
+                display: flex;
+                align-items: center;
+    
+            }
+            .circleIcon {
+                color: $black;
+                background-color: $tertiaryColor;
+                border-radius: 50%;
+                font-size: 3rem;
+                padding-top: 10px;
+                margin-right: 20px;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                vertical-align: middle;
+                
+            
+            }
+        }
+    }
+    
+
+}
+
+.sectionFour {
+    background-color: $secondaryColor;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+
+    &img {
+    width: calc((100% / 3) - 20px);
+    
+    }
+}
+   
+

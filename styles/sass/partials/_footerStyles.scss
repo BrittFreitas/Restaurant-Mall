@@ -1,0 +1,17 @@
+@use "variables" as*;
+
+footer {
+    background-color: $black;
+    color: $white;
+    .copyrightStatement {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        p {
+            margin: 0;
+        }
+      }
+      .copyrightStatement p {
+       margin: 0;
+      }
+}

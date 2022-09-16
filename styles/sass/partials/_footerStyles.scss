@@ -3,15 +3,16 @@
 footer {
     background-color: $black;
     color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
     .copyrightStatement {
-        display: flex;
-        justify-content: center;
         font-size: 1.5rem;
-        p {
-            margin: 0;
-        }
-      }
-      .copyrightStatement p {
-       margin: 0;
-      }
 }
+.copyright{
+    margin-right: 5px;
+    font-size: 1.3rem;
+}
+}
+

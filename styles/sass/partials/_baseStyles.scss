@@ -9,5 +9,11 @@
 body {
     font-family: $bodyFont;
     color: $white;
+    font-size: 62.5%;
 }
 
+button {
+    font-size: 2.24rem;
+    line-height: 41.6px;
+    text-transform: uppercase;
+}

@@ -2,8 +2,7 @@
 
 @font-face {
    font-family:'Josefin Sans', sans-serif;
-   src: url(../);
-   
+   src: url(../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
 }
 
 
@@ -23,13 +22,10 @@
       font-family: $headingFont;
       font-size: 6.9rem;
       text-transform: uppercase;
+      font-weight: 400;
      }
    
-     h2 {
-      font-family: $headingFont;
-      font-size: 4.5rem;
-      text-transform: uppercase;
-     }
+   
      nav {
       font-family: $headingFont;
      }
@@ -39,3 +35,10 @@
      }
   }
  
+  h2 {
+   font-family: $headingFont;
+   font-size: 4.5rem;
+   text-transform: uppercase;
+   line-height: 99.8px;
+   font-weight: 400;
+  }

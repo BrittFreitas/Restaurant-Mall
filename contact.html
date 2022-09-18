@@ -12,7 +12,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
+    <header class="contactHeader">
       <nav>
         <ul>
           <li><a href="./index.html">Home</a></li>
@@ -23,7 +23,7 @@
       </nav>
       <h1>get in touch</h1>
     </header>
-    <main>
+    <main class="flexContainer">
       <section>
         <div class="contact">
           <div class="iconContainer">
@@ -40,14 +40,20 @@
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <form>
-            <input type="text" name="name" placeholder="Name" />
-            <input type="text" name="email" placeholder="Email Address" />
-            <textarea rows="4" cols="50" name="comment">comment</textarea>
+      <section class="rightSide">
+        <div class="formBox">
+          <form class="contactForm">
+            <div class="userInfo">
+              <label for="name"></label>
+              <input class="name" type="text" name="name" placeholder="Name" />
+              <label for="email"></label>
+              <input class="email" type="text" name="email" placeholder="Email Address" />
+            </div>
+            <div class="textArea">
+              <textarea rows="10" cols="50" name="comment">Message</textarea> 
+             </div> 
+             <button>SUBMIT</button>
           </form>
-          <button>SUBMIT</button>
         </div>
       </section>
     </main>

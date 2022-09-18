@@ -244,10 +244,10 @@ html h1 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 6.9rem;
   text-transform: uppercase;
-  font-weight: 400;
 }
 html nav {
   font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
 }
 html p {
   font-size: 2rem;
@@ -299,6 +299,208 @@ button {
   font-size: 2.24rem;
   line-height: 41.6px;
   text-transform: uppercase;
+}
+
+.blogHeader {
+  background-image: url(../assets/blog-header.jpg);
+  background-size: cover;
+  height: 60vh;
+  width: 100vw;
+}
+
+.firstSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.firstSection h2,
+.firstSection p {
+  margin: 10px 40px;
+}
+.firstSection .boxShadow {
+  -webkit-box-shadow: -16px 15px #FFD300;
+          box-shadow: -16px 15px #FFD300;
+}
+.firstSection img {
+  position: relative;
+  width: 60%;
+  float: right;
+  bottom: 160px;
+}
+.firstSection .employmentOpportunities {
+  border-bottom: 5px solid #FFD300;
+  border-left: 5px solid #FFD300;
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  padding: 40px;
+  position: relative;
+  left: 39%;
+  bottom: 150px;
+}
+.firstSection .employmentOpportunities h2 {
+  font-size: 4.5rem;
+  line-height: 99.8px;
+  color: #FFD300;
+}
+
+.blogSide {
+  background-color: #171B0E;
+  width: 20%;
+  left: 4%;
+  padding: 10px;
+}
+.blogSide img {
+  position: relative;
+  right: 25%;
+  width: 120%;
+}
+.blogSide h3 {
+  color: #FFD300;
+  font-size: 2rem;
+  line-height: 58px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.blogSide ul,
+.blogSide p {
+  font-size: 1.8rem;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+
+.form1 {
+  width: 50%;
+  position: relative;
+  left: 830px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form1 .commentForm {
+  background-color: #2B331B;
+  width: 40%;
+  font-size: 2rem;
+}
+.form1 .commentForm input,
+.form1 .commentForm textarea {
+  border-bottom: 2px solid #FFD300;
+  background-color: #2B331B;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  color: white;
+}
+.form1 .commentButton {
+  background-color: #FFD300;
+  text-transform: uppercase;
+}
+
+.contactHeader {
+  background-image: url(../assets/contact-header.jpg);
+  background-size: cover;
+  height: 60vh;
+  width: 100vw;
+}
+
+.flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+}
+.flexContainer .iconContainer {
+  color: #FFD300;
+  font-size: 2rem;
+}
+.flexContainer .iconContainer a {
+  margin: 5px;
+}
+
+.rightSide {
+  height: 60vh;
+  width: 50%;
+}
+
+.formBox {
+  height: 80%;
+  position: relative;
+  -webkit-box-shadow: 15px 15px #FFD300;
+          box-shadow: 15px 15px #FFD300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #171B0E;
+  padding: 50px;
+}
+.formBox .contactForm {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+}
+.formBox .contactForm .userInfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+input {
+  width: 50%;
+  color: white;
+  background-color: #171B0E;
+  border-bottom: 2px solid #FFD300;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+}
+
+button {
+  background-color: #FFD300;
+}
+
+textarea {
+  color: white;
+  background-color: #171B0E;
+  border: 2px solid #FFD300;
+  width: 100%;
 }
 
 header {
@@ -411,17 +613,15 @@ header nav li a:focus {
 
 .sectionTwo {
   background-color: #171B0E;
-  height: 70vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 100%;
 }
-.sectionTwo .sectionContent {
+.sectionTwo .sectionContent1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -429,28 +629,48 @@ header nav li a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 40%;
+  width: 35%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 80px;
+}
+.sectionTwo .sectionContent2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 31%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: right;
+  padding-right: 15px;
 }
 .sectionTwo .img1 {
   position: relative;
-  top: 50px;
-  width: 40%;
+  width: 41%;
+  bottom: 75px;
+  left: 10px;
 }
-.sectionTwo .img1 .boxShadowLeft {
-  -webkit-box-shadow: -12px 12px #FFD300;
-          box-shadow: -12px 12px #FFD300;
+.sectionTwo .img1 .boxShadowRight {
+  -webkit-box-shadow: 15px 15px #FFD300;
+          box-shadow: 15px 15px #FFD300;
   width: 100%;
   display: block;
   height: auto;
 }
 .sectionTwo .img2 {
   position: relative;
-  bottom: 50px;
-  width: 40%;
+  width: 41%;
+  top: 5px;
 }
-.sectionTwo .img2 .boxShadowRight {
-  -webkit-box-shadow: 12px 12px #FFD300;
-          box-shadow: 12px 12px #FFD300;
+.sectionTwo .img2 .boxShadowLeft {
+  -webkit-box-shadow: -15px 15px #FFD300;
+          box-shadow: -15px 15px #FFD300;
   width: 100%;
   display: block;
   height: auto;
@@ -462,11 +682,13 @@ header nav li a:focus {
   background-color: #FFD300;
   color: black;
   width: 175px;
+  margin-top: 30px;
 }
 
 .sectionThree h2 {
   color: #FFD300;
   margin: 0;
+  padding-bottom: 20px;
 }
 .sectionThree .retaurantImgContainer {
   display: -webkit-box;
@@ -489,7 +711,7 @@ header nav li a:focus {
 .sectionThree button {
   color: white;
   background-color: black;
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 10px;
 }
 .sectionThree .giftCart {
@@ -507,7 +729,7 @@ header nav li a:focus {
       -ms-flex-pack: center;
           justify-content: center;
   width: 60%;
-  height: 60vh;
+  height: 50vh;
   padding-top: 50px;
 }
 .sectionThree .natureSpaces {

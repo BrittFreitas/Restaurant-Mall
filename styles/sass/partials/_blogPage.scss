@@ -1,0 +1,143 @@
+@use "variables" as *;
+
+.blogHeader {
+  background-image: url(../assets/blog-header.jpg);
+  background-size: cover;
+  height: 60vh;
+  width: 100vw;
+}
+
+.firstSection {
+  display: flex;
+  flex-direction: column;
+
+  h2,
+  p {
+    margin: 10px 40px;
+  }
+
+  .boxShadow {
+    box-shadow: -16px 15px $tertiaryColor;
+  }
+  img {
+    position: relative;
+    width: 60%;
+    float: right;
+    bottom: 160px;
+  }
+  .employmentOpportunities {
+    border-bottom: 5px solid $tertiaryColor;
+    border-left: 5px solid $tertiaryColor;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 40px;
+    position:relative;
+    left: 39%;
+    bottom: 150px;
+
+    h2 {
+      font-size: 4.5rem;
+      line-height: 99.8px;
+      color: $tertiaryColor;
+    }
+  }
+}
+
+.blogSide {
+  background-color: $secondaryColor;
+  width: 20%;
+  //position: relative;
+  //bottom: 1400px;
+  left: 4%;
+  padding: 10px;
+
+  img {
+    position: relative;
+    right: 25%;
+    width: 120%;
+  }
+  h3 {
+    color: $tertiaryColor;
+    font-size: 2rem;
+    line-height: 58px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  ul,
+  p {
+    font-size: 1.8rem;
+    line-height: 28px;
+    letter-spacing: 1px;
+  }
+}
+
+
+// .commentSection {
+//   display: flex;
+//   flex-direction: column;
+//   width: 50%;
+//   position: relative;
+//   left: 830px;
+//   height: 50vh;
+//   h3 {
+//     font-size: 2rem;
+//     color: $tertiaryColor;
+//   }
+//   .comment1,
+//   .comment2 {
+//     display: flex;
+//     gap: 30px;
+//     justify-content: center;
+//     align-items: flex-start;
+//     padding: 20px;
+//     .commentWords {
+//       display: flex;
+//       flex-direction: column;
+//       width: 70%;
+//     }
+//     h3,
+//     p {
+//       margin: 0;
+//     }
+//   }
+//   .commentImg {
+//     width: 10%;
+//   }
+// }
+
+.form1 {
+    width: 50%;
+    position: relative;
+    left: 830px;
+    //height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  .commentForm {
+    background-color: $primaryColor;
+    width: 40%;
+    font-size: 2rem;
+
+    input,
+    textarea {
+      border-bottom: 2px solid $tertiaryColor;
+      background-color: $primaryColor;
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      color: $white;
+    }
+  }
+  .commentButton {
+    background-color: $tertiaryColor;
+    text-transform: uppercase;
+  }
+}
+
+// .firstSection {
+//   height: 60vh !important;
+// }

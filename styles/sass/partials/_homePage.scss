@@ -113,52 +113,61 @@ header {
             }
         }
     }
-    
-
 }
 
 .sectionTwo {
     background-color: $secondaryColor;
-    height: 70vh;
+    height: 80vh;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
 
-    .sectionContent {
+    .sectionContent1 {
         display:flex;
         flex-direction: column;
-        width: 40%;
+        width: 35%;
+        justify-content: center;
+        padding-left: 80px;
+    }
+
+    .sectionContent2 {
+        display:flex;
+        flex-direction: column;
+        width: 31%;
+        align-items: flex-end;
+        text-align: right;
+        padding-right: 15px;
+       
     }
 
     .img1 {
         position: relative;
-        top: 50px;
-        width: 40%;
+        width: 41%;
+        bottom: 75px;
+        left: 10px;
+        .boxShadowRight {
+            box-shadow: 15px 15px $tertiaryColor;
+            width: 100%;
+            display:block;
+            height:auto;
+        }    
+ }
 
+    .img2 {
+        position: relative;
+        width: 41%;
+        top: 5px;
+       
         .boxShadowLeft {
-            box-shadow: -12px 12px $tertiaryColor;
+            box-shadow: -15px 15px $tertiaryColor;
             width: 100%;
             display:block;
             height:auto;
             
        }
- }
-
-    .img2 {
-        position: relative;
-        bottom: 50px;
-        width: 40%;
-        
-       .boxShadowRight {
-        box-shadow: 12px 12px $tertiaryColor;
-        width: 100%;
-        display:block;
-        height:auto;
-    }
-
+       
     }
    
-
     h2, p {
         margin: 0;
     }
@@ -167,9 +176,9 @@ header {
         background-color: $tertiaryColor;
         color: $black;
         width: 175px; 
+        margin-top: 30px;
     }
 }
-
 
 
 .sectionThree {
@@ -177,6 +186,7 @@ header {
     h2 {
         color: $tertiaryColor;
         margin: 0;
+        padding-bottom: 20px;
     }
     
     .retaurantImgContainer{
@@ -196,7 +206,7 @@ header {
 button {
         color: $white;
         background-color: $black;
-        margin-top: 20px;
+        margin-top: 40px;
         padding: 10px;
     }
 
@@ -206,7 +216,7 @@ button {
         align-items: center;
         justify-content: center;
         width: 60%;
-        height: 60vh;
+        height: 50vh;
         padding-top: 50px;
     }
 .natureSpaces {
@@ -228,9 +238,6 @@ button {
         }
     }
 }
-
-
-
 
 
 

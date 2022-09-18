@@ -1,0 +1,69 @@
+@use "variables" as *;
+
+.contactHeader {
+  background-image: url(../assets/contact-header.jpg);
+  background-size: cover;
+  height: 60vh;
+  width: 100vw;
+}
+
+.flexContainer {
+  display: flex;
+  max-width: 100%;
+
+  .iconContainer {
+    color: $tertiaryColor;
+    font-size: 2rem;
+    a {
+      margin: 5px;
+    }
+  }
+}
+
+.rightSide {
+    height: 60vh;
+    width: 50%;
+}
+.formBox {
+  //width: 60%;
+  height: 80%;
+  position: relative;
+  box-shadow: 15px 15px $tertiaryColor;
+  display: flex;
+  flex-direction: column;
+  background-color: $secondaryColor;
+  padding: 50px;
+
+  .contactForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    .userInfo {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+input {
+  width: 50%;
+  color: $white;
+  background-color: $secondaryColor;
+  border-bottom: 2px solid $tertiaryColor;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+}
+
+button {
+  background-color: $tertiaryColor;
+}
+
+textarea {
+  color: $white;
+  background-color: $secondaryColor;
+  border: 2px solid $tertiaryColor;
+  width: 100%;
+}

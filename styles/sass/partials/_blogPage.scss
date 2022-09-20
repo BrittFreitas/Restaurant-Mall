@@ -1,143 +1,308 @@
 @use "variables" as *;
+@use "mixins" as *;
+
+
+@include tablet {
+  h2 {
+    font-size: 3.0rem;
+  }
+  
+  p {
+    font-size: 1.0rem;
+  }
+}
+
 
 .blogHeader {
   background-image: url(../assets/blog-header.jpg);
   background-size: cover;
-  height: 60vh;
-  width: 100vw;
+  background-repeat: no-repeat;
+  height: 50vh;
+  background-position: 0% 29%;
+
+  .hidden {
+    font-size: 3rem;
+    margin: 40px;
+    display: none;
+
+    @include mobile {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  ul {
+    padding: 0px;
+ 
+  }
+  nav {
+    padding-left: 100px;
+  }
+
+  h1 {
+    padding: 50px 0 0 100px;
+  }
+
+  @include tablet {
+    height:  40vh;
+
+    nav {
+      display: none;
+    }
+
+    h1 {
+      margin: 0px;
+      padding-top: 142px;
+    
+    }
+  }
+
+  @include mobile {
+    h1 {
+      padding: 150px 60px;
+    }
+  }
+}
+
+.imgHere {
+  display: flex;
+  flex-direction: column;
+  box-shadow: -15px 15px $tertiaryColor;
+  margin-top: -110px;
+
+  @include tablet {
+    margin-top: 0px;
+    box-shadow: none;
+  }
 }
 
 .firstSection {
   display: flex;
-  flex-direction: column;
-
-  h2,
-  p {
-    margin: 10px 40px;
-  }
-
-  .boxShadow {
-    box-shadow: -16px 15px $tertiaryColor;
-  }
-  img {
-    position: relative;
-    width: 60%;
-    float: right;
-    bottom: 160px;
-  }
-  .employmentOpportunities {
-    border-bottom: 5px solid $tertiaryColor;
-    border-left: 5px solid $tertiaryColor;
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 40px;
-    position:relative;
-    left: 39%;
-    bottom: 150px;
-
-    h2 {
-      font-size: 4.5rem;
-      line-height: 99.8px;
-      color: $tertiaryColor;
-    }
-  }
+  justify-content: space-between;
 }
 
 .blogSide {
+   height: fit-content;
   background-color: $secondaryColor;
   width: 20%;
-  //position: relative;
-  //bottom: 1400px;
-  left: 4%;
+  margin-left: 80px;
+  margin-top: 110px;
   padding: 10px;
+  
+ 
+    img {
+      position: relative;
+      right: 3%;
+      width: 120%;
+    }
+    h3 {
+      color: $tertiaryColor;
+      font-size: 2rem;
+      line-height: 58px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  
+    ul,
+    p {
+      font-size: 1.8rem;
+      line-height: 28px;
+      letter-spacing: 1px;
+    }
+
+    @include tablet {
+        display: none;
+      }
+    }
+  
+
+.employmentContainer {
+  width: 62%;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.imgBox {
+  margin-left: -88px;
+  margin-top: -40px;
+  width: 122%;
 
   img {
-    position: relative;
-    right: 25%;
-    width: 120%;
-  }
-  h3 {
-    color: $tertiaryColor;
-    font-size: 2rem;
-    line-height: 58px;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-
-  ul,
-  p {
-    font-size: 1.8rem;
-    line-height: 28px;
-    letter-spacing: 1px;
+    width: 100%;
   }
 }
 
+.featured {
+padding-right: 25px;
+}
 
-// .commentSection {
-//   display: flex;
-//   flex-direction: column;
-//   width: 50%;
-//   position: relative;
-//   left: 830px;
-//   height: 50vh;
-//   h3 {
-//     font-size: 2rem;
-//     color: $tertiaryColor;
-//   }
-//   .comment1,
-//   .comment2 {
-//     display: flex;
-//     gap: 30px;
-//     justify-content: center;
-//     align-items: flex-start;
-//     padding: 20px;
-//     .commentWords {
-//       display: flex;
-//       flex-direction: column;
-//       width: 70%;
-//     }
-//     h3,
-//     p {
-//       margin: 0;
-//     }
-//   }
-//   .commentImg {
-//     width: 10%;
-//   }
-// }
+.employmentOpportunities {
+  border-left: 5px solid $tertiaryColor;
+  border-bottom: 5px solid $tertiaryColor;
+  border-top: 5px solid $tertiaryColor;
 
-.form1 {
-    width: 50%;
-    position: relative;
-    left: 830px;
-    //height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  .commentForm {
-    background-color: $primaryColor;
-    width: 40%;
-    font-size: 2rem;
+  .paraWrapper {
+    padding: 50px 100px 100px 100px;
+  }
 
-    input,
-    textarea {
-      border-bottom: 2px solid $tertiaryColor;
-      background-color: $primaryColor;
-      border-top-style: hidden;
-      border-right-style: hidden;
-      border-left-style: hidden;
-      color: $white;
+ 
+  @include mobile {
+    h2 {
+      font-size: 2.5rem;
+      line-height: 45.8px;
+      text-align: center;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+    .paraWrapper {
+      padding: 30px;
     }
   }
-  .commentButton {
-    background-color: $tertiaryColor;
-    text-transform: uppercase;
-  }
+
+
+
 }
 
-// .firstSection {
-//   height: 60vh !important;
-// }
+
+
+.blogtwo {
+  width: 100%;
+}
+
+.form1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  input {
+    background-color: $primaryColor;
+    font-size: 2.0rem;
+    border-bottom: 2px solid $tertiaryColor;
+    width: 50%;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+
+    &::placeholder {
+      opacity: 1;
+      color: $white;
+    }
+
+
+    @include mobile {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .inputContainer {
+  display: flex;
+  gap: 5px;
+  height: 5vh;
+  background-color: $primaryColor;
+}
+
+textarea {
+  height: 185px;
+  margin-top: 20px;
+  width: 100%;
+  border: 2px solid $tertiaryColor;
+  resize: none;
+  background-color: $primaryColor;
+  font-size: 2.0rem;
+  padding: 5px 0px;
+
+  &::placeholder {
+    opacity: 1;
+    color: $white;
+  }
+}
+}
+
+
+.commentButton {
+  width: 100%;
+}
+
+.commentSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2% 6% 0 45%;
+  height: 100vh;
+
+  @include tablet{
+    margin: 40px;
+    padding: 0px;
+  }
+
+  @include mobile {
+    margin: 10px;
+    
+      form.commentForm {
+        width: 90%;
+        justify-content: center;
+      }
+  
+      .form1 input {
+        font-size: 1.2rem;
+      }
+
+      .form1 textarea {
+        height: 70px;
+        font-size: 1.2rem;
+      }
+
+      .form1 button {
+        font-size: 1.6rem;
+      }
+
+      textarea {
+        margin-left: 15px;
+      }
+  }
+}
+  
+  h2 {
+    margin: 0;
+  }
+  h3 {
+      font-size: 2rem;
+      color: $tertiaryColor;
+      margin: 0px;
+    }
+    .comment1,
+    .comment2 {
+      display: flex;
+      gap: 30px;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding: 20px 0px; 
+    }
+      
+      .commentWords {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+      }
+    
+      p {
+        margin: 10px;
+      }
+    
+    .commentImg {
+      width: 10%;
+    }
+  
+
+  button, input, optgroup, select, textarea {
+    margin: 14px;
+
+
+    }
+  
+

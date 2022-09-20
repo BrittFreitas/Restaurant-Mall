@@ -1,259 +1,380 @@
-@use "variables" as*;
+@use "variables" as *;
+@use "mixins" as *;
 
-header {
-    background-image: url(../assets/home-header.jpg);
-    background-repeat: no-repeat;
-    height: 70vh;
-    width: 100vw;
-    background-size: cover;
-    background-position: 0% 90%;
-    object-fit: contain;
+.homepageHeader {
+  background-image: url(../assets/home-header.jpg);
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: 0% 90%;
+  object-fit: contain;
+
+  .hidden {
+    font-size: 3rem;
+    margin: 40px;
+    display: none;
+
+    @include mobile {
+      display: contents;
+    }
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+
+    .restaurant {
+      background-color: white;
+      color: $secondaryColor;
+      display: block;
+      width: 475px;
+    }
+  }
+
+  @include tablet {
+    a {
+      padding-left: 20px;
+      margin-right: 0px;
+    }
 
     h1 {
-        display: flex;
-        flex-direction: column;
-        padding: 50px 25px;
-    
-        .restaurant {
-            background-color: white;
-            color: $secondaryColor;
-            display: block;
-            width: 475px;
-        }
+      font-size: 5rem;
+      width: 100%;
+      padding: 50px 50px;
     }
+
+    span.restaurant {
+      width: 350px;
+    }
+  }
+  @include mobile {
+    h1 {
+      font-size: 3rem;
+    }
+
+    span.restaurant {
+      width: 210px;
+    }
+
     nav {
-        ul {
-            display: flex
-            
-        }
-         li {
-            list-style-type: none;
-            padding-top: 50px;
-    
-            a{ 
-                color: $white;
-                text-decoration: none;
-                background-color: transparent;
-                margin-right: 50px;
-              
-                line-height: 29px;
-                letter-spacing: 1px;
-                font-size: 2.0rem;
-                font-weight: bold;
-                &:hover {
-                    border-bottom: 2px solid $tertiaryColor;
-                }
-
-                &:focus {
-                    border-bottom: 2px solid $tertiaryColor;
-
-                }
-            }
-         }
-
+      display: none;
     }
+  }
 }
 
-    
-
-
-
 .sectionOne {
-    position: relative;
-    background-color: $primaryColor;
-    height: 55vh;
+  background-color: $primaryColor;
+  height: 70vh;
+  @include smallerLaptop {
+    .contentContainer.wrapper {
+      margin: 50px;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+    .plateContainer {
+      display: none;
+    }
+  }
 
-    p {
-        margin: 0px;
+  @include tablet {
+    .contentContainer.wrapper {
+      margin-top: 160px;
+      width: 80%;
     }
     h2 {
-        margin: 0;
+      font-size: 3.5rem;
     }
-    .platedFoodImg {
-        position: absolute;
-        bottom: 540px;
-        right: 0px;
-        width: auto;
-        
-    }
+  }
+}
+p {
+  margin: 0px;
+}
+h2 {
+  margin: 0;
+}
+.plateContainer {
+  width: 51%;
+  margin-top: -500px;
+  float: right;
 
-    .contentContainer {
+  .platedFoodImg {
+    width: 100%;
+  }
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin-top: 200px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .info {
+    width: 40%;
+
+    @include tablet {
+      width: 90%;
+    }
+    @include mobile {
+      .titleContainer {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 20px;
-        margin-top: 200px;
-        
-        .info {
-            width: 40%;
-         
-            
-            .titleContainer {
-                display: flex;
-                align-items: center;
-                position: relative;
-    
-            }
-            .circleIcon {
-                color: $black;
-                background-color: $tertiaryColor;
-                border-radius: 50%;
-                font-size: 3rem;
-                padding-top: 10px;
-                margin-right: 20px;
-                width: 50px;
-                height: 50px;
-                text-align: center;
-                vertical-align: middle;
-                position: absolute;
-                left:-70px;
-
-                
-            
-            }
-        }
+      flex-direction: column;
+      }
     }
+    .titleContainer {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .circleIcon {
+      color: $black;
+      background-color: $tertiaryColor;
+      border-radius: 50%;
+      font-size: 3rem;
+      padding-top: 10px;
+      margin-right: 20px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      vertical-align: middle;
+      position: absolute;
+      left: -70px;
+    }
+  }
 }
 
 .sectionTwo {
-    background-color: $secondaryColor;
-    height: 80vh;
-    display:flex;
-    flex-wrap: wrap;
-    width: 100%;
+  background-color: $secondaryColor;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 
-    .sectionContent1 {
-        display:flex;
-        flex-direction: column;
-        width: 35%;
-        justify-content: center;
-        padding-left: 80px;
-    }
-
-    .sectionContent2 {
-        display:flex;
-        flex-direction: column;
-        width: 31%;
-        align-items: flex-end;
-        text-align: right;
-        padding-right: 15px;
-       
-    }
-
-    .img1 {
-        position: relative;
-        width: 41%;
-        bottom: 75px;
-        left: 10px;
-        .boxShadowRight {
-            box-shadow: 15px 15px $tertiaryColor;
-            width: 100%;
-            display:block;
-            height:auto;
-        }    
- }
-
-    .img2 {
-        position: relative;
-        width: 41%;
-        top: 5px;
-       
-        .boxShadowLeft {
-            box-shadow: -15px 15px $tertiaryColor;
-            width: 100%;
-            display:block;
-            height:auto;
-            
-       }
-       
-    }
-   
-    h2, p {
-        margin: 0;
-    }
-
-    button {
-        background-color: $tertiaryColor;
-        color: $black;
-        width: 175px; 
-        margin-top: 30px;
-    }
-}
-
-
-.sectionThree {
-   
-    h2 {
-        color: $tertiaryColor;
-        margin: 0;
-        padding-bottom: 20px;
-    }
-    
-    .retaurantImgContainer{
-        display: flex;
-        justify-content: center;
-    img {
-       width: 100%;
-       height: auto;
-       object-fit: cover;  
-       aspect-ratio: 3.2 / 1;
-    } 
-}
-
- p {
-        margin: 0;
-    }
-button {
-        color: $white;
-        background-color: $black;
-        margin-top: 40px;
-        padding: 10px;
-    }
-
-  .giftCart {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        height: 50vh;
-        padding-top: 50px;
-    }
-.natureSpaces {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 60vh;
-       
-        img {
-            box-shadow: -12px 12px $tertiaryColor;
-        }
-
-        .natureContentContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 50%;
-        }
-    }
-}
-
-
-
-.sectionFour {
-    background-color: $secondaryColor;
-    height: 50vh;
+  @include tablet {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
+    height: 100vh;
+  }
+
+  .sectionContent1 {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    justify-content: center;
+    padding-left: 80px;
+
+    @include smallerLaptop {
+      align-items: flex-start;
+      text-align: left;
+      width: 50%;
+    }
+    @include tablet {
+      width: 90%;
+      text-align: center;
+      align-items: center;
+      padding-left: 0px;
+    }
+  }
+
+  .sectionContent2 {
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 15px;
+
+    @include smallerLaptop {
+      align-items: flex-start;
+      text-align: left;
+      width: 50%;
+    }
+    @include tablet {
+      width: 90%;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  .img1 {
+    position: relative;
+    width: 41%;
+    bottom: 75px;
+    left: 10px;
+
+    @include tablet {
+      width: 30%;
+      left: 0;
+      bottom: 35px;
+    }
+  }
+
+  .boxShadowRight {
+    box-shadow: 15px 15px $tertiaryColor;
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+}
+
+.img2 {
+  position: relative;
+  width: 41%;
+  top: 5px;
+  @include tablet {
+    width: 30%;
+  }
+  .boxShadowLeft {
+    box-shadow: -15px 15px $tertiaryColor;
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+button {
+  background-color: $tertiaryColor;
+  color: $black;
+  width: 175px;
+  margin-top: 30px;
+}
+
+.sectionThree {
+  h2 {
+    color: $tertiaryColor;
+    margin: 0;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  @include tablet {
+    h2 {
+      font: 1.6rem;
+      line-height: 46px;
+    }
+  }
+
+  .retaurantImgContainer {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 3.2 / 1;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    color: $white;
+    background-color: $black;
+    margin-top: 40px;
+    padding: 10px;
+  }
+
+  .giftCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 50vh;
+    padding-top: 50px;
+
+    @include tablet {
+      width: 90%;
+      text-align: center;
+      .findMore {
+        width: 80%;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .natureSpaces {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60vh;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      height: 70vh;
+
+      .plantPic {
+        display: none;
+      }
+    }
+
+    img {
+      box-shadow: -12px 12px $tertiaryColor;
+    }
+
+    .natureContentContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 50%;
+
+      @include smallerLaptop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+          width: 90%;
+          text-align: center;
+          .findMore {
+            width: 80%;
+            font-size: 1.6rem;
+          }
+        }
+
+        h2 {
+          font-size: 3.2rem;
+        }
+      }
+    }
+  }
+}
+
+.sectionFour {
+  background-color: $secondaryColor;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gallery {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 
-    img {
+  img {
     width: calc((100% / 3) - 20px);
-    }
+  }
 }

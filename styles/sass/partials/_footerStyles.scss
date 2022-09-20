@@ -1,18 +1,27 @@
-@use "variables" as*;
+@use "variables" as *;
+@use "mixins" as *;
 
 footer {
-    background-color: $black;
-    color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5vh;
-    .copyrightStatement {
-        font-size: 1.5rem;
-}
-.copyright{
+  background-color: $black;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+
+  @include mobile {
+    & p {
+     font-size: 1.6rem;
+     padding: 0px;
+   }
+ }
+  .copyrightStatement {
+    font-size: 1.5rem;
+  }
+  .copyright {
     margin-right: 5px;
     font-size: 1.3rem;
-}
-}
+  }
 
+  
+}

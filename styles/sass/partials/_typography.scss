@@ -1,50 +1,40 @@
 @use "variables" as *;
 
 @font-face {
-   font-family:'Josefin Sans', sans-serif;
-   src: url(../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+  font-family: "Josefin Sans", sans-serif;
+  src: url(../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
 }
 
-
 @font-face {
-    font-family: 'barlow', sans-serif;
-    src: url(../fonts/Barlow/Barlow-Regular.ttf);
-    font-weight: normal;
-    font-style: normal;
+  font-family: "barlow", sans-serif;
+  src: url(../fonts/Barlow/Barlow-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+
+  h1 {
+    font-family: $headingFont;
+    font-size: 6.9rem;
+    text-transform: uppercase;
   }
 
-
-  /* _typography.scss */
-
-  html {
-   font-size: 62.5%;
-   
-   h1 {
-      font-family: $headingFont;
-      font-size: 6.9rem;
-      text-transform: uppercase;
-      
-     }
-   
-   
-     nav {
-      font-family: $headingFont;
-      font-weight: bold;
-     }
-
-     p {
-      font-size: 2.0rem;
-     
-     }
-
-      
+  nav {
+    font-family: $headingFont;
+    font-weight: bold;
   }
-  
- 
-  h2 {
-   font-family: $headingFont;
-   font-size: 4.5rem;
-   text-transform: uppercase;
-   line-height: 99.8px;
-   font-weight: 400;
+
+  p {
+    font-size: 2rem;
   }
+}
+
+h2 {
+  font-family: $headingFont;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  line-height: 99.8px;
+  font-weight: 400;
+}

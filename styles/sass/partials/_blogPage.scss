@@ -1,17 +1,15 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-
 @include tablet {
   h2 {
-    font-size: 3.0rem;
+    font-size: 3rem;
   }
-  
+
   p {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 }
-
 
 .blogHeader {
   background-image: url(../assets/blog-header.jpg);
@@ -22,7 +20,8 @@
 
   .hidden {
     font-size: 3rem;
-    margin: 40px;
+    padding: 40px;
+    padding-left: 300px;
     display: none;
 
     @include mobile {
@@ -34,7 +33,6 @@
 
   ul {
     padding: 0px;
- 
   }
   nav {
     padding-left: 100px;
@@ -45,7 +43,7 @@
   }
 
   @include tablet {
-    height:  40vh;
+    height: 40vh;
 
     nav {
       display: none;
@@ -54,13 +52,12 @@
     h1 {
       margin: 0px;
       padding-top: 142px;
-    
     }
   }
 
   @include mobile {
     h1 {
-      padding: 150px 60px;
+      padding: 70px 100px;
     }
   }
 }
@@ -83,39 +80,37 @@
 }
 
 .blogSide {
-   height: fit-content;
+  height: fit-content;
   background-color: $secondaryColor;
   width: 20%;
   margin-left: 80px;
   margin-top: 110px;
   padding: 10px;
-  
- 
-    img {
-      position: relative;
-      right: 3%;
-      width: 120%;
-    }
-    h3 {
-      color: $tertiaryColor;
-      font-size: 2rem;
-      line-height: 58px;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-  
-    ul,
-    p {
-      font-size: 1.8rem;
-      line-height: 28px;
-      letter-spacing: 1px;
-    }
 
-    @include tablet {
-        display: none;
-      }
-    }
-  
+  img {
+    position: relative;
+    right: 3%;
+    width: 120%;
+  }
+  h3 {
+    color: $tertiaryColor;
+    font-size: 2rem;
+    line-height: 58px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  ul,
+  p {
+    font-size: 1.8rem;
+    line-height: 28px;
+    letter-spacing: 1px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
 
 .employmentContainer {
   width: 62%;
@@ -136,7 +131,7 @@
 }
 
 .featured {
-padding-right: 25px;
+  padding-right: 25px;
 }
 
 .employmentOpportunities {
@@ -148,7 +143,6 @@ padding-right: 25px;
     padding: 50px 100px 100px 100px;
   }
 
- 
   @include mobile {
     h2 {
       font-size: 2.5rem;
@@ -162,12 +156,7 @@ padding-right: 25px;
       padding: 30px;
     }
   }
-
-
-
 }
-
-
 
 .blogtwo {
   width: 100%;
@@ -177,10 +166,10 @@ padding-right: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+
   input {
     background-color: $primaryColor;
-    font-size: 2.0rem;
+    font-size: 2rem;
     border-bottom: 2px solid $tertiaryColor;
     width: 50%;
     border-top-style: hidden;
@@ -192,36 +181,34 @@ padding-right: 25px;
       color: $white;
     }
 
-
     @include mobile {
       font-size: 1.2rem;
     }
   }
-  
+
   .inputContainer {
-  display: flex;
-  gap: 5px;
-  height: 5vh;
-  background-color: $primaryColor;
-}
+    display: flex;
+    gap: 5px;
+    height: 5vh;
+    background-color: $primaryColor;
+  }
 
-textarea {
-  height: 185px;
-  margin-top: 20px;
-  width: 100%;
-  border: 2px solid $tertiaryColor;
-  resize: none;
-  background-color: $primaryColor;
-  font-size: 2.0rem;
-  padding: 5px 0px;
+  textarea {
+    height: 185px;
+    margin-top: 20px;
+    width: 100%;
+    border: 2px solid $tertiaryColor;
+    resize: none;
+    background-color: $primaryColor;
+    font-size: 2rem;
+    padding: 5px 0px;
 
-  &::placeholder {
-    opacity: 1;
-    color: $white;
+    &::placeholder {
+      opacity: 1;
+      color: $white;
+    }
   }
 }
-}
-
 
 .commentButton {
   width: 100%;
@@ -234,75 +221,73 @@ textarea {
   padding: 2% 6% 0 45%;
   height: 100vh;
 
-  @include tablet{
+  @include tablet {
     margin: 40px;
     padding: 0px;
   }
 
   @include mobile {
     margin: 10px;
-    
-      form.commentForm {
-        width: 90%;
-        justify-content: center;
-      }
-  
-      .form1 input {
-        font-size: 1.2rem;
-      }
 
-      .form1 textarea {
-        height: 70px;
-        font-size: 1.2rem;
-      }
+    form.commentForm {
+      width: 90%;
+      justify-content: center;
+    }
 
-      .form1 button {
-        font-size: 1.6rem;
-      }
+    .form1 input {
+      font-size: 1.2rem;
+    }
 
-      textarea {
-        margin-left: 15px;
-      }
+    .form1 textarea {
+      height: 70px;
+      font-size: 1.2rem;
+    }
+
+    .form1 button {
+      font-size: 1.6rem;
+    }
+
+    textarea {
+      margin-left: 15px;
+    }
   }
 }
-  
-  h2 {
-    margin: 0;
-  }
-  h3 {
-      font-size: 2rem;
-      color: $tertiaryColor;
-      margin: 0px;
-    }
-    .comment1,
-    .comment2 {
-      display: flex;
-      gap: 30px;
-      justify-content: space-evenly;
-      align-items: flex-start;
-      padding: 20px 0px; 
-    }
-      
-      .commentWords {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
 
-      }
-    
-      p {
-        margin: 10px;
-      }
-    
-    .commentImg {
-      width: 10%;
-    }
-  
+h2 {
+  margin: 0;
+}
+h3 {
+  font-size: 2rem;
+  color: $tertiaryColor;
+  margin: 0px;
+}
+.comment1,
+.comment2 {
+  display: flex;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 20px 0px;
+}
 
-  button, input, optgroup, select, textarea {
-    margin: 14px;
+.commentWords {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
 
+p {
+  margin: 10px;
+}
 
-    }
-  
+.commentImg {
+  width: 10%;
+}
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 14px;
+}
